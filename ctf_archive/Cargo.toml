@@ -1,0 +1,67 @@
+[package]
+name = "ctf_archive"
+version = "0.1.0"
+edition = "2024"
+authors = [ "James Connolly <jconnoll1@stevens.edu>" ]
+license = "GPL-3.0-or-later"
+
+[dependencies.tokio]
+version = "1"
+features = [ "rt-multi-thread", "macros" ]
+
+[dependencies.axum]
+version = "0.8"
+features = [ "multipart" ]
+
+[dependencies.utoipa]
+version = "5.4"
+features = [ "axum_extras" ]
+
+[dependencies.utoipa-swagger-ui]
+version = "9.0"
+features = [ "axum", "vendored" ]
+
+[dependencies.diesel]
+version = "2.2"
+features = [ "postgres", "postgres_backend", "chrono" ]
+
+[dependencies.diesel-async]
+version = "0.6"
+features = [ "postgres", "bb8" ]
+
+[dependencies.diesel_migrations]
+version = "2.2"
+features = [ "postgres" ]
+
+[dependencies.serde]
+version = "1.0"
+features = [ "derive", "alloc" ]
+
+[dependencies.jwt-simple]
+version = "0.12"
+features = [ "pure-rust" ]
+default-features = false
+
+[dependencies.diesel-derive-enum]
+version = "2.1"
+features = [ "postgres" ]
+
+[dependencies.tower-http]
+version = "0.6"
+features = [ "cors" ]
+
+[dependencies]
+serde_json = "1.0"
+chrono = "0.4"
+log = "0.4"
+base64 = "0.22"
+p256 = "0.13"
+hex-literal = "1"
+thiserror = "2.0"
+pretty_env_logger = "0.5"
+futures-util = "0.3"
+getrandom = "0.3"
+
+[features]
+default = []
+production = []

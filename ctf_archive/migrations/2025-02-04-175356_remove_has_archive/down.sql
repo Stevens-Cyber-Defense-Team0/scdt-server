@@ -1,0 +1,1 @@
+ALTER TABLE challenges ADD COLUMN has_archive boolean GENERATED ALWAYS AS (archive IS NOT NULL) STORED NOT NULL;

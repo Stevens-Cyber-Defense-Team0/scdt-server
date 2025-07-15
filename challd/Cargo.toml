@@ -1,0 +1,36 @@
+[package]
+name = "challd"
+version = "0.1.0"
+edition = "2024"
+authors = [ "James Connolly <jconnoll1@stevens.edu>" ]
+license = "GPL-3.0-or-later"
+
+[dependencies.x25519-dalek]
+version = "2"
+features = [ "static_secrets", "getrandom" ]
+
+[dependencies.tokio]
+version = "1"
+features = [ "rt-multi-thread", "macros", "time", "net", "signal", "process", "io-util" ]
+
+[dependencies.tokio-util]
+version = "0.7"
+features = [ "rt" ]
+
+[dependencies.futures-util]
+version = "0.3"
+default-features = false
+
+[dependencies]
+defguard_wireguard_rs = "0.7"
+base64 = "0.22"
+thiserror = "2"
+bollard = "0.19"
+pretty_env_logger = "0.5"
+log = "0.4"
+
+[features]
+default = []
+gvisor = []
+challd_group = []
+domain_name = []

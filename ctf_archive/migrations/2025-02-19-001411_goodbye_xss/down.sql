@@ -1,0 +1,4 @@
+CREATE TABLE xss_posts (
+	id SERIAL PRIMARY KEY,
+	post VARCHAR(254) NOT NULL
+);
